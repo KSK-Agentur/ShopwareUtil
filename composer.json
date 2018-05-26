@@ -1,0 +1,13 @@
+{
+    "name": "heptacom/shopware-util",
+    "description": "Provide helpful utility traits and classes for shopware development.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua Behrens",
+            "email": "behrens@ksk-agentur.de"
+        }
+    ],
+    "minimum-stability": "dev"
+}
