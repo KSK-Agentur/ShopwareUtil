@@ -2,7 +2,27 @@
 
 namespace Heptacom\Shopware\Util\Subscriber;
 
-use Enlight_Event_EventArgs
+use Enlight_Event_EventArgs;
+use Shopware_Controllers_Api_Addresses;
+use Shopware_Controllers_Api_Articles;
+use Shopware_Controllers_Api_Caches;
+use Shopware_Controllers_Api_Categories;
+use Shopware_Controllers_Api_Countries;
+use Shopware_Controllers_Api_CustomerGroups;
+use Shopware_Controllers_Api_Customers;
+use Shopware_Controllers_Api_CustomerStreams;
+use Shopware_Controllers_Api_Error;
+use Shopware_Controllers_Api_GenerateArticleImages;
+use Shopware_Controllers_Api_Manufacturers;
+use Shopware_Controllers_Api_Media;
+use Shopware_Controllers_Api_Orders;
+use Shopware_Controllers_Api_PropertyGroups;
+use Shopware_Controllers_Api_Rest;
+use Shopware_Controllers_Api_Shops;
+use Shopware_Controllers_Api_Translations;
+use Shopware_Controllers_Api_Users;
+use Shopware_Controllers_Api_Variants;
+use Shopware_Controllers_Api_Version;
 
 /**
  * @method void beforeVersionIndexAction(Shopware_Controllers_Api_Version $controller)
