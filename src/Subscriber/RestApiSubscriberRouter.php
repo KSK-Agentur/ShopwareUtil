@@ -246,6 +246,7 @@ trait RestApiSubscriberRouter
      * @param string $controllerName
      * @param string $action
      * @param string $position
+     *
      * @return string
      */
     public function generateApiRequestFunctionName($controllerName, $action, $position)
@@ -253,4 +254,3 @@ trait RestApiSubscriberRouter
         return $position . ucfirst($controllerName) . ucfirst($action) . 'Action';
     }
 }
-

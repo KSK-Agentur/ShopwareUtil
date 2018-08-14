@@ -7,6 +7,7 @@ use Shopware_Components_Acl;
 
 /**
  * Trait DecoratesResource
+ *
  * @property object $decorated
  */
 trait DecoratesResource
@@ -139,4 +140,3 @@ trait DecoratesResource
         return $this->decorated->batch($data);
     }
 }
-
