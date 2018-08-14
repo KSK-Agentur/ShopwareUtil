@@ -1,2 +1,5 @@
 # Ignore composer
 vendor/
+
+# Ignore JetBrains
+/\.idea/
