@@ -62,7 +62,7 @@ class AssignConfigurationToView implements SubscriberInterface
     {
         /** @var Enlight_Controller_Action $controller */
         $controller = $args->get('subject');
-        $config = $this->configReader->getByPluginName($this->configReader, $this->syntheticDependenciesProvider->getShopOrNull());
+        $config = $this->configReader->getByPluginName($this->pluginName, $this->syntheticDependenciesProvider->getShopOrNull());
 
         $controller->View()->assign([
             $this->pluginName => [
