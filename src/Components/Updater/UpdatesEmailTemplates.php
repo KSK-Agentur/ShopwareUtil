@@ -3,7 +3,7 @@
 namespace Heptacom\Shopware\Util\Components\Updater;
 
 use Doctrine\ORM\OptimisticLockException;
-use Heptacom\Shopware\Util\ContainerAwares\IsModelManagerAware;
+use Heptacom\Shopware\Util\ContainerAwares\HasModelManager;
 use Shopware\Models\Mail\Mail;
 
 /**
@@ -11,7 +11,7 @@ use Shopware\Models\Mail\Mail;
  */
 trait UpdatesEmailTemplates
 {
-    use IsModelManagerAware;
+    use HasModelManager;
 
     /**
      * @param string[] $templateNames

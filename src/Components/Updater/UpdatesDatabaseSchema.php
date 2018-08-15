@@ -5,14 +5,14 @@ namespace Heptacom\Shopware\Util\Components\Updater;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Tools\SchemaTool;
 use Doctrine\ORM\Tools\ToolsException;
-use Heptacom\Shopware\Util\ContainerAwares\IsModelManagerAware;
+use Heptacom\Shopware\Util\ContainerAwares\HasModelManager;
 
 /**
  * Trait UpdatesDatabaseSchema
  */
 trait UpdatesDatabaseSchema
 {
-    use IsModelManagerAware;
+    use HasModelManager;
 
     /**
      * @param string[] $modelClasses

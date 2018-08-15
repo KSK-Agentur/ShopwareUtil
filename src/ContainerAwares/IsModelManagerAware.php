@@ -5,32 +5,19 @@ namespace Heptacom\Shopware\Util\ContainerAwares;
 use Shopware\Components\Model\ModelManager;
 
 /**
- * Trait IsModelManagerAware
+ * Interface IsModelManagerAware
  */
-trait IsModelManagerAware
+interface IsModelManagerAware
 {
-    /**
-     * @var ModelManager
-     */
-    private $modelManagerService;
-
     /**
      * @return ModelManager
      */
-    public function getModelManager()
-    {
-        return $this->modelManagerService;
-    }
+    public function getModelManager();
 
     /**
      * @param ModelManager $modelManagerService
      *
      * @return $this
      */
-    public function setModelManager(ModelManager $modelManagerService)
-    {
-        $this->modelManagerService = $modelManagerService;
-
-        return $this;
-    }
+    public function setModelManager(ModelManager $modelManagerService);
 }
