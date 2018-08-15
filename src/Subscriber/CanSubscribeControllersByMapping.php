@@ -1,5 +1,7 @@
 <?php
 
+namespace Heptacom\Shopware\Util\Subscriber;
+
 /**
  * Trait CanSubscribeControllersByMapping
  *
