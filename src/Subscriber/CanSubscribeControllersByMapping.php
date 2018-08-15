@@ -2,6 +2,8 @@
 
 namespace Heptacom\Shopware\Util\Subscriber;
 
+use Enlight_Event_EventArgs;
+
 /**
  * Trait CanSubscribeControllersByMapping
  *
