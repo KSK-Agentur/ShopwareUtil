@@ -40,7 +40,7 @@ trait UpdatesEmailTemplates
             $mailTemplate = new Mail();
         }
 
-        $mailTemplate->fromArray($templateName);
+        $mailTemplate->fromArray($this->generateMailTemplateData($templateName));
 
         $this->getModelManager()->persist($mailTemplate);
         $this->getModelManager()->flush($mailTemplate);
