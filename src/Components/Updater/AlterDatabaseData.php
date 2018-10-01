@@ -37,8 +37,8 @@ trait AlterDatabaseData
             $newData = call_user_func($transformer, $row);
             if ($newData != $row) {
                 $changes = array_diff_assoc($newData, $row);
-                $primerayKeyValues = array_intersect_key($row, array_fill_keys($primaryKeys, true));
-                $connection->update($table, $changes, $primerayKeyValues);
+                $primaryKeyValues = array_intersect_key($row, array_fill_keys($primaryKeys, true));
+                $connection->update($table, $changes, $primaryKeyValues);
             }
         }
     }
@@ -65,8 +65,8 @@ trait AlterDatabaseData
 
         foreach ($queryBuilder->execute()->fetchAll(\PDO::FETCH_ASSOC) as $row) {
             if (call_user_func($predicate, $row)) {
-                $primerayKeyValues = array_intersect_key($row, array_fill_keys($primaryKeys, true));
-                $connection->delete($table, $primerayKeyValues);
+                $primaryKeyValues = array_intersect_key($row, array_fill_keys($primaryKeys, true));
+                $connection->delete($table, $primaryKeyValues);
             }
         }
     }
