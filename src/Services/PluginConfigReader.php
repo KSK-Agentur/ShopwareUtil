@@ -41,6 +41,7 @@ class PluginConfigReader
 
     /**
      * @param Shop $shop
+     *
      * @return array
      */
     public function byOrm(Shop $shop)
@@ -50,6 +51,7 @@ class PluginConfigReader
 
     /**
      * @param ShopContextInterface $shop
+     *
      * @return array
      */
     public function byContext(ShopContextInterface $shop)
@@ -59,6 +61,7 @@ class PluginConfigReader
 
     /**
      * @param int $shopId
+     *
      * @return array
      */
     public function byId($shopId)
