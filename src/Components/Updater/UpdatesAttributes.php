@@ -93,8 +93,7 @@ trait UpdatesAttributes
         $config = $this->getAttributeCrud()->get($table, $this->prefixAttributeName($name));
 
         if ($config instanceof ConfigurationStruct) {
-            $type = $this->getAttributeTypeMapping()->dbalToUnified(Type::getType($config->getDbalType()));
-            $this->getAttributeCrud()->update($config->getTableName(), $config->getColumnName(), $type, $options);
+            $this->getAttributeCrud()->update($config->getTableName(), $config->getColumnName(), $config->getColumnType(), $options);
         }
 
         return $this;
