@@ -80,4 +80,12 @@ class PluginConfigReader
     {
         return $this->configReader->getByPluginName($this->pluginName, $this->dependenciesProvider->getShopOrNull());
     }
+
+    /**
+     * @return string
+     */
+    public function getPluginName(): string
+    {
+        return $this->pluginName;
+    }
 }
