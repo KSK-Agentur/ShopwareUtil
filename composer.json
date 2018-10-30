@@ -3,7 +3,7 @@
     "description": "Provide helpful utility traits and classes for shopware development.",
     "type": "library",
     "license": "MIT",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "authors": [
         {
             "name": "Joshua Behrens",
