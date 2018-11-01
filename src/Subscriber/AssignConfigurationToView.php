@@ -15,9 +15,13 @@ class AssignConfigurationToView implements SubscriberInterface
     /** @var PluginConfigReader */
     private $pluginConfigReader;
 
+    /** @var string|null */
+    private $pluginName;
+
     public function __construct(PluginConfigReader $pluginConfigReader, $pluginName = null)
     {
         $this->pluginConfigReader = $pluginConfigReader;
+        $this->pluginName = $pluginName;
     }
 
     /**
@@ -40,7 +44,7 @@ class AssignConfigurationToView implements SubscriberInterface
         $config = $this->pluginConfigReader->byDefault();
 
         $controller->View()->assign([
-            $this->pluginConfigReader->getPluginName() => ['config' => $config],
+            ($this->pluginName ?: $this->pluginConfigReader->getPluginName()) => ['config' => $config],
         ]);
     }
 }
