@@ -2,7 +2,6 @@
 
 namespace Heptacom\Shopware\Util\Components\Updater;
 
-use RuntimeException;
 use Shopware\Components\Plugin\Context\UpdateContext;
 
 /**
@@ -38,17 +37,11 @@ trait UpdatesFromVersion
      * @param callable $action
      * @param mixed ...$params
      *
-     * @throws RuntimeException
-     *
      * @return $this
      */
     public function updateSinceVersion($version, callable $action, ...$params)
     {
-        if (!$this->getUpdateContext() instanceof UpdateContext) {
-            throw new RuntimeException('updateContext is not set');
-        }
-
-        if (version_compare($this->getUpdateContext()->getCurrentVersion(), $version, '<')) {
+        if (!$this->getUpdateContext() instanceof UpdateContext || version_compare($this->getUpdateContext()->getCurrentVersion(), $version, '<')) {
             call_user_func($action, ...$params);
         }
 
